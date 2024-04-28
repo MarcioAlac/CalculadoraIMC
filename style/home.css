@@ -18,6 +18,7 @@ body
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     letter-spacing: .4px;
     text-align: center;
+    background-image: url('assets/weight.png');
 }
 
 main
@@ -29,28 +30,42 @@ main
 
 span
 {
-    /* o elemento color altera a cor dos texto da pagina neste caso eu coloquei o span em vermelho, mas no caso se fosse o titulo da pagina com a tag H2 era so trocar o span por h2 que o resultado seria igual */
-
-    /* repara que coloquei uma "," la em cima isso pro css significa que eu quero selecionar as 2 tags do html */
     color: rgb(255, 0, 0);
+}
+
+.alert
+{
+    color: rgb(255, 251, 5);
+}
+
+.alert-ok
+{
+    color: rgb(77, 255, 77);
+}
+
+.alert-ok, .alert, span 
+{
+    font-size: 102%;
+    font-weight: bold;
+    text-transform: lowercase;
 }
 
 form
 {
+    display: flex;
     box-shadow: 8px 10px 20px rgba(0, 0, 0, 0.521);
 }
 
 .imc > h3
 {
-    display: flex;
-    margin-bottom: 10%;
-    transform: translateX(7.2%);
+    text-align: center;
+    margin-bottom: 5%;
 }
 
 .container
 {   
     /* width é o tamanho da caixa, ai eu usei uma medida flex vw significa view weight */
-    width: 80vw;
+    width: 90vw;
     background-color: beige;
 
     border: 1px solid rgba(48, 48, 48, 0.747);
@@ -65,27 +80,104 @@ form
     justify-items: center;
 }
 
-.imc-frame
+
+.imc input 
 {
-    border: 1px solid black;
-    border-radius: 8px;
+    border-radius: 5px;
     padding: 2%;
+    outline: none;
+    border: 1px solid black;
+    color: rgb(31, 63, 168);
+    box-shadow: inset 0 0 10px #681f1f;
 }
 
+.imc-frame
+{
+    color: white;
+    border: 1px solid black;
+    border-radius: 8px;
+    background-color: brown;
+    padding: 2%;
+}
+.show 
+{
+    display: block;
+}
+
+#result p 
+{
+    color: black;
+}
+
+.result
+{
+    display: block !important;
+    position: absolute;
+    background-color: white;
+    padding: 1%;
+    max-width: 30%;
+    top: 44%;
+    left: 44%;
+    border-radius: 8px;
+    
+}
+
+.div-imc
+{
+    display: block !important;
+}
+
+.result div
+{
+    display: flex;
+margin-right: 5%;
+margin-bottom: 5%;
+}
+
+.result span 
+{
+    color: rgb(0, 0, 0);
+    text-align: center;
+    justify-self: center;
+    transform: translateY(36px);
+    z-index: 2;
+}
+
+.div
+{
+    display: flex;
+}
+
+#res-nome
+{
+    margin-right: 20%;
+}
 .imc-frame div
 {
     /* margin é a mesma coisa que o padding so q externo */
     margin-bottom: 2%;
 }
 
+.kg
+{
+    color: rgb(4, 255, 117);
+    font-weight: bold;
+    font-size: 102%;
+    text-decoration: dotted;
+}
+
 /* Aqui esto configurando o botao do submit  */
 .imc-btn
 {
-    margin-top: 3%;
+    margin-top: 10%;
     margin-bottom: 3%;
-    padding: 2%;
-    background-color: rgb(25, 194, 101);
-    transition: all ease-out .3s;
+    color: white !important;
+    border: none !important;
+    padding: 5% !important;
+    border-radius: 12px !important;
+    background-color: rgb(233, 35, 35);
+    transition: all ease .3s;
+    box-shadow: 12px 15px 15px rgba(80, 6, 6, 0.603);;
 }
 
 /* eu quero que quando o mouse passe em cima desse botao ele mude seu comportamento */
@@ -93,10 +185,11 @@ form
 /* hover seria mouse over, ou seja quando o cursor do mouse estiver em cima do botao ou da tag que eu escolhi oque eu coloquei la dentro vai acontecer */
 .imc-btn:hover
 {
-    transform: scale(1.05);
-    color: red;
-    font-weight: 800;
-    letter-spacing: .8px;
+    /* transform: scale(1.001); */
+    color: rgb(255, 255, 255);
+    background-color: rgb(31, 63, 168);
+    font-weight: bold;
+    letter-spacing: .4px;
     outline: none;
     border-radius: 8px;
 }
@@ -104,4 +197,16 @@ form
 .img-calc
 {
     margin-top: 5%;
+}
+
+.imc-table
+{
+    padding: 6%;
+    text-align: initial;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    letter-spacing: 0.99px;
+    color: rgb(255, 255, 255);
+    font-size: 19px;
+    background-color: rgb(31, 63, 168);
+    border-radius: 9px;
 }

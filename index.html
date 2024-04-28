@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <!-- A tag head seria a cabeça do arquivo, onde vai as informaçoes da pagina -->
+<!-- A tag head seria a cabeça do arquivo, onde vai as informaçoes da pagina -->
 
-    <!-- A tag <head> no HTML é usada para fornecer informações gerais (metadados) sobre o documento1. Ela é colocada entre a tag <html> e a tag <body>2. O conteúdo da tag <head> não é exibido na página quando carregada no navegador. -->
+<!-- A tag <head> no HTML é usada para fornecer informações gerais (metadados) sobre o documento1. Ela é colocada entre a tag <html> e a tag <body>2. O conteúdo da tag <head> não é exibido na página quando carregada no navegador. -->
 
-    <!-- Os metadados são dados sobre o documento HTML, como quem o escreveu, e palavras-chave importantes que descrevem o documento. Eles geralmente definem o título do documento, o conjunto de caracteres, estilos, scripts e outras informações. -->
+<!-- Os metadados são dados sobre o documento HTML, como quem o escreveu, e palavras-chave importantes que descrevem o documento. Eles geralmente definem o título do documento, o conjunto de caracteres, estilos, scripts e outras informações. -->
 
 <head>
     <meta charset="UTF-8">
@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="style/home.css">
     <title>Calc - Imc</title>
 </head>
+
 <body>
     <!-- Vamos começar criando uma caixa para colocar as coisas dentro dela, no modo metaforico -->
 
@@ -30,42 +31,78 @@
         <div class="container">
             <div class="imc">
                 <!-- a tag h e onde vao os titulos das paginas -->
-                <h3>Calculadora IMC ultra Foda !!!</h3>
+                <h3>Calculadora IMC ultra Foda !!</h3>
 
                 <!-- Dentro dessa div, vai as informaçoes que vamos pedir para o usuario -->
-                <form action="#" method="GET">
+                <form method="GET">
                     <div class="imc-frame">
-                        <p>Abaixo insira suas informaçoes <br> para que seja possivel saber sua gordura <br> seu filho da puta
+                        <p>Abaixo insira suas informaçoes <br> para que seja possivel saber sua gordura <br> seu filho
+                            da puta
                         </p>
-    
+
                         <!-- Aqui vamos colocar as entradas do nosso programa -->
                         <div class="img-calc">
-                            <div class="imc-name">
+                            <div class="imc imc-name">
                                 <label for="user-name">Nome</label>
-                                <input type="text" name="user-name" id="user-name" placeholder="Jose Armando Ku na Vara">
+                                <input type="text" name="user-name" id="user-name"
+                                    placeholder="Jose Armando Ku na Vara">
                             </div>
-    
-                            <div class="imc-age">
+
+                            <div class="imc imc-age">
                                 <label for="user-age">Idade</label>
                                 <input type="number" name="user-age" id="user-age" placeholder="24">
                             </div>
-    
-                            <div class="imc-height">
+
+                            <div class="imc imc-height">
                                 <label for="user-name">Altura</label>
                                 <input type="number" name="user-height" id="user-height">
                             </div>
-    
-                            <div class="imc-weight">
-                                <label for="user-weight">Peso <span>KG</span></label>
-                                <input type="number" name="user-weight" id="user-weight" placeholder="250">
+
+                            <div class="imc imc-weight">
+                                <label for="user-weight">Peso<label> <span class="kg">KG</span></label>
+                                    <input type="number" name="user-weight" id="user-weight" placeholder="250">
                             </div>
-    
+
                         </div>
                         <!-- Aqui a gente esta configurando o botao de submit do formulario, neste caso é regra ter um botao submit, ou o usuario nao vai conseguir enviar as informaçoes -->
 
                         <!-- Eu prefiro esse padrao ai a baixo -->
                         <input type="submit" value="Calcular Essa Disgraça" class="imc-btn">
                     </div>
+
+                    <div class="imc-table">
+                        <p>
+                            Resultados menores que <span>16</span> — magreza grave <br>
+                            Resultados entre <span>16 e 16,9</span> — magreza moderada <br>
+                            Resultados entre <span class="alert"> 17 e 18,5</span> — magreza leve <br>
+                            Resultados entre <span class="alert-ok">18,6 e 24,9</span> — peso ideal <br>
+                            Resultados entre <span class="alert">25 e 29,9</span> — sobrepeso <br>
+                            Resultados entre <span>30 e 34,9</span> — obesidade grau I <br>
+                            Resultados entre <span>35 e 39,9</span> — obesidade grau II ou severa <br>
+                            Resultados maiores do que <span>40</span> — obesidade grau III ou mórbida <br>
+                        </p>
+                    </div>
+
+                    <div class="result">
+                        <div class="result-div">
+                            <div class="div div-nome">
+                                <p>Nome:&nbsp</p>
+                                <p id="res-nome"></p>
+                            </div>
+    
+                            <div class="div div-idade">
+                                <p>idade:&nbsp</p>
+                                <p id="res-idade"></p>
+                            </div>
+                        </div>
+
+
+                        <div class="div-imc">
+                            <p>Seu IMC é</p>
+                            <p id="result"></p>
+                        </div>
+                    </div>
+
                 </form>
             </div>
         </div>
@@ -73,4 +110,5 @@
     <!-- Colocamos o script no final da tag body para evitar que o script rode antes dos elementos carregarem, mas temos outras estrategias para resolver este problema tmb, mas para o inicio esse ta mais faicl de explicar  -->
     <script src="script/imc.js"></script>
 </body>
+
 </html>
