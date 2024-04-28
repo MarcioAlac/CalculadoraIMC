@@ -1,0 +1,107 @@
+/* E de praste a gente zerar todos os presets do navegador, geralmente os navegadores vem com configuraçoes de margin e padding padronizados que podem fuder o nosso layout */
+
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* no css a gente seleciona as tags do hmtl ou pelo nome da tag, ou pelo id ou class */
+/* Na tag body por exempplo eu troquei a cor de fudno da pagina  */
+
+body
+{
+    /* Aqui troquei a cor de fundo, alterei todas as fontes do documento para Georgia e modifiquei os espaçoes entre as letras */
+
+    background-color: rgb(221, 214, 214);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    letter-spacing: .4px;
+    text-align: center;
+}
+
+main
+{
+    display: flex;
+    justify-content: center;
+    margin-top: 10%;
+}
+
+span
+{
+    /* o elemento color altera a cor dos texto da pagina neste caso eu coloquei o span em vermelho, mas no caso se fosse o titulo da pagina com a tag H2 era so trocar o span por h2 que o resultado seria igual */
+
+    /* repara que coloquei uma "," la em cima isso pro css significa que eu quero selecionar as 2 tags do html */
+    color: rgb(255, 0, 0);
+}
+
+form
+{
+    box-shadow: 8px 10px 20px rgba(0, 0, 0, 0.521);
+}
+
+.imc > h3
+{
+    display: flex;
+    margin-bottom: 10%;
+    transform: translateX(7.2%);
+}
+
+.container
+{   
+    /* width é o tamanho da caixa, ai eu usei uma medida flex vw significa view weight */
+    width: 80vw;
+    background-color: beige;
+
+    border: 1px solid rgba(48, 48, 48, 0.747);
+    /* border-radius e a bordar se vai ser quina ou circular */
+    border-radius: 8px;
+    /* padding é o espaço interno da caixa  */
+    padding: 2%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+}
+
+.imc-frame
+{
+    border: 1px solid black;
+    border-radius: 8px;
+    padding: 2%;
+}
+
+.imc-frame div
+{
+    /* margin é a mesma coisa que o padding so q externo */
+    margin-bottom: 2%;
+}
+
+/* Aqui esto configurando o botao do submit  */
+.imc-btn
+{
+    margin-top: 3%;
+    margin-bottom: 3%;
+    padding: 2%;
+    background-color: rgb(25, 194, 101);
+    transition: all ease-out .3s;
+}
+
+/* eu quero que quando o mouse passe em cima desse botao ele mude seu comportamento */
+/* agora a selecao vai ser um pouco diferente, vamos usar o : para escolher o tipo de evento */
+/* hover seria mouse over, ou seja quando o cursor do mouse estiver em cima do botao ou da tag que eu escolhi oque eu coloquei la dentro vai acontecer */
+.imc-btn:hover
+{
+    transform: scale(1.05);
+    color: red;
+    font-weight: 800;
+    letter-spacing: .8px;
+    outline: none;
+    border-radius: 8px;
+}
+
+.img-calc
+{
+    margin-top: 5%;
+}

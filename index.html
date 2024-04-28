@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <!-- A tag head seria a cabeça do arquivo, onde vai as informaçoes da pagina -->
+
+    <!-- A tag <head> no HTML é usada para fornecer informações gerais (metadados) sobre o documento1. Ela é colocada entre a tag <html> e a tag <body>2. O conteúdo da tag <head> não é exibido na página quando carregada no navegador. -->
+
+    <!-- Os metadados são dados sobre o documento HTML, como quem o escreveu, e palavras-chave importantes que descrevem o documento. Eles geralmente definem o título do documento, o conjunto de caracteres, estilos, scripts e outras informações. -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Calculadora Imc">
+    <meta name="version" content="0.1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Aqui em baixo eu ja adiantei o link para o arquivo css -->
+    <!-- A tag LINK serve para linkar arquivos externos de estilo a pagina html -->
+    <link rel="stylesheet" href="style/home.css">
+    <title>Calc - Imc</title>
+</head>
+<body>
+    <!-- Vamos começar criando uma caixa para colocar as coisas dentro dela, no modo metaforico -->
+
+    <!-- Vou usar a tag main do html que é semantica, ela diz ao leitor do "codigo" que ali dentro vai o conteudo principal da pagina -->
+
+    <!-- Recomendo que aperte alt + z do seu teclado para warpar as linhas -->
+
+    <!-- Ok !! tudo bem ? vamos lá ! -->
+
+    <main>
+        <!-- div é uma tag que significa parte, teoricamente falando, vc pode por qualquer coisa dentro delas e nomea-las usando a class -->
+        <div class="container">
+            <div class="imc">
+                <!-- a tag h e onde vao os titulos das paginas -->
+                <h3>Calculadora IMC ultra Foda !!!</h3>
+
+                <!-- Dentro dessa div, vai as informaçoes que vamos pedir para o usuario -->
+                <form action="#" method="GET">
+                    <div class="imc-frame">
+                        <p>Abaixo insira suas informaçoes <br> para que seja possivel saber sua gordura <br> seu filho da puta
+                        </p>
+    
+                        <!-- Aqui vamos colocar as entradas do nosso programa -->
+                        <div class="img-calc">
+                            <div class="imc-name">
+                                <label for="user-name">Nome</label>
+                                <input type="text" name="user-name" id="user-name" placeholder="Jose Armando Ku na Vara">
+                            </div>
+    
+                            <div class="imc-age">
+                                <label for="user-age">Idade</label>
+                                <input type="number" name="user-age" id="user-age" placeholder="24">
+                            </div>
+    
+                            <div class="imc-height">
+                                <label for="user-name">Altura</label>
+                                <input type="number" name="user-height" id="user-height">
+                            </div>
+    
+                            <div class="imc-weight">
+                                <label for="user-weight">Peso <span>KG</span></label>
+                                <input type="number" name="user-weight" id="user-weight" placeholder="250">
+                            </div>
+    
+                        </div>
+                        <!-- Aqui a gente esta configurando o botao de submit do formulario, neste caso é regra ter um botao submit, ou o usuario nao vai conseguir enviar as informaçoes -->
+
+                        <!-- Eu prefiro esse padrao ai a baixo -->
+                        <input type="submit" value="Calcular Essa Disgraça" class="imc-btn">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
