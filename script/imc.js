@@ -12,7 +12,12 @@ class CalculadoraImc {
     formSubmit() {
         document.querySelector('form').addEventListener('submit', function(event) {
             event.preventDefault();
-            console.log(event);
+
+            const nome = document.querySelector('#user-name').value
+            const age = document.querySelector('#user-age').value
+            const height = document.querySelector('#user-height').value
+            const width = document.querySelector('#user-weight').value
+            console.log(nome, width, age, height);
         });
     }
 }
