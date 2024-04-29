@@ -7,7 +7,17 @@ class CalculadoraImc
     constructor()
     {
         this.request_user()
+        this.popup = new PopUpImc
         
+    }
+
+    textAdd(name, age, imc)
+    {
+        console.log(imc)
+        let userName = document.querySelector('#nome')
+        userName.textContent = name
+        document.querySelector('#age').textContent = age
+        document.querySelector('#imc-result').innerText = imc
     }
     
     calculo(alt, pes)
@@ -30,7 +40,6 @@ class CalculadoraImc
             // height = altura 
             const altura = document.querySelector('#user-height').value
             const peso = document.querySelector('#user-weight').value
-            
            
             console.log
             ( 
@@ -41,34 +50,38 @@ class CalculadoraImc
             ) 
 
             var calculo = this.calculo(altura, peso)
-            this.show()
-            this.print_result(calculo, nome, idade)
-            this.close()
+            this.textAdd(nome, idade, calculo)
 
         }.bind(this))
+    }
+}
+
+class PopUpImc
+{
+    constructor()
+    {
+        console.log('popUP')
+        this.show()
+        this.close()
+    }   
+
+    close()
+    {
+        document.querySelector('#close').addEventListener('click', function ()
+        {
+            console.log('clock')
+            document.querySelector('.result').classList.remove('show')
+            document.querySelector('.result').classList.add('close')
+        })
     }
 
     show()
     {
-        document.querySelector('.result').style.display = 'flex'
-    }
-
-    print_result(calc, name, idade)
-    {
-        document.querySelector('#result').textContent = calc.toFixed(1)
-        document.querySelector('#res-nome').textContent = name
-        document.querySelector('#res-idade').textContent = idade
-    }
-
-    close()
-    {
-        console.log(123)
-        document.querySelector('.result').addEventListener('click', function (e)
-    {
-        document.querySelector('.result').style.display = 'none'
-    })
+        document.querySelector('.imc-btn').addEventListener('click', function ()
+        {
+            document.querySelector('.result').classList.add('show')
+        })
     }
 }
-
 
 var imc = new CalculadoraImc 

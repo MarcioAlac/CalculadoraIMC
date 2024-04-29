@@ -111,41 +111,33 @@ form
 
 .result
 {
-    display: block !important;
+    display: none !important;
     position: absolute;
     background-color: white;
     padding: 1%;
-    max-width: 30%;
-    top: 44%;
-    left: 44%;
+    max-width: 50%; max-height: 40%;
+    width: 100%; height: 100%;
+    top: 39%;
+    left: 24%;
     border-radius: 8px;
-    
 }
 
-.div-imc
-{
-    display: block !important;
-}
-
-.result div
+.result-content
 {
     display: flex;
-margin-right: 5%;
-margin-bottom: 5%;
+    font-size: 130%;
 }
 
-.result span 
+.result-content-imc
 {
-    color: rgb(0, 0, 0);
-    text-align: center;
-    justify-self: center;
-    transform: translateY(36px);
-    z-index: 2;
+    margin-top: 5%;
+    font-size: 190%;
+    font-weight: bold;
 }
 
-.div
+.result-content-close:hover
 {
-    display: flex;
+    color: red;
 }
 
 #res-nome
@@ -209,4 +201,14 @@ margin-bottom: 5%;
     font-size: 19px;
     background-color: rgb(31, 63, 168);
     border-radius: 9px;
+}
+
+.close
+{
+    display: none !important;
+}
+
+.show
+{
+    display: block !important; 
 }
